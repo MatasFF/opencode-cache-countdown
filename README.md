@@ -52,9 +52,8 @@ Add the package to the `plugins` array in `~/.config/opencode/cli.json`:
 ```
 
 After the package is published to npm, `"opencode-cache-countdown"` also works.
-A TUI-only plugin belongs in `cli.json`. Putting it in `opencode.json` also
-works when the server part loads its TUI part, but `cli.json` is the direct
-route.
+A TUI-only plugin like this one belongs in `cli.json`; `opencode.json` is for
+packages that also have a server part.
 
 Restart or reload OpenCode if the plugin does not appear immediately (the TUI
 watches plugin directories and usually hot-loads it).
