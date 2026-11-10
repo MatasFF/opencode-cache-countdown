@@ -33,7 +33,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "bun run build.ts",
+    "compile": "bun run build.ts",
     "test": "bun test",
     "typecheck": "tsc --noEmit"
   },

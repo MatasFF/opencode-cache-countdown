@@ -97,11 +97,11 @@ changes what the countdown assumes when the model has no configured TTL.
 ```sh
 bun install
 bun test
-bun run build
+bun run compile
 bun run typecheck
 ```
 
-`bun run build` compiles `src/tui.tsx` into `dist/tui.js` with the OpenTUI
+`bun run compile` compiles `src/tui.tsx` into `dist/tui.js` with the OpenTUI
 Solid transform. OpenCode transforms local plugin files outside `node_modules`,
 but it deliberately skips installed packages, so the `./tui` export must point
 at compiled JavaScript for GitHub and npm installs.
@@ -121,18 +121,18 @@ Or symlink it into the auto-discovery directory:
 ln -s "$PWD" ~/.config/opencode/plugins/opencode-cache-countdown
 ```
 
-Run `bun run build` after editing `src/`; reusing the checkout loads
+Run `bun run compile` after editing `src/`; reusing the checkout loads
 `dist/tui.js`.
 
 ## Publishing
 
 ```sh
-bun run build
+bun run compile
 npm login
 npm publish
 ```
 
-Run `bun run build` before publishing so `dist/tui.js` matches `src/`. The
+Run `bun run compile` before publishing so `dist/tui.js` matches `src/`. The
 built entry is committed so GitHub installs work without a build step on the
 user's machine, and CI fails if the committed build is stale.
 
