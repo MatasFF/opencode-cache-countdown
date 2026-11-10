@@ -47,10 +47,11 @@ Add the package to the `plugins` array in `~/.config/opencode/cli.json`:
 ```jsonc
 {
   "$schema": "https://opencode.ai/v2/cli.json",
-  "plugins": ["opencode-cache-countdown"]
+  "plugins": ["github:MatasFF/opencode-cache-countdown"]
 }
 ```
 
+After the package is published to npm, `"opencode-cache-countdown"` also works.
 A TUI-only plugin belongs in `cli.json`. Putting it in `opencode.json` also
 works when the server part loads its TUI part, but `cli.json` is the direct
 route.
