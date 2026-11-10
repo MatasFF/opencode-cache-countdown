@@ -1,0 +1,65 @@
+{
+  "name": "opencode-cache-countdown",
+  "version": "0.1.0",
+  "description": "OpenCode TUI plugin that shows the remaining prompt-cache lifetime in the prompt footer.",
+  "type": "module",
+  "license": "MIT",
+  "author": "MatasFF",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatasFF/opencode-cache-countdown.git"
+  },
+  "homepage": "https://github.com/MatasFF/opencode-cache-countdown#readme",
+  "bugs": {
+    "url": "https://github.com/MatasFF/opencode-cache-countdown/issues"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "prompt-cache",
+    "cache",
+    "tui",
+    "claude",
+    "anthropic",
+    "bedrock"
+  ],
+  "exports": {
+    "./tui": "./src/tui.tsx"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.2.7"
+  },
+  "peerDependencies": {
+    "@opentui/core": ">=0.8.1",
+    "@opentui/solid": ">=0.8.1",
+    "solid-js": ">=1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode/theme": "^2.2.7",
+    "@opentui/core": "0.8.1",
+    "@opentui/solid": "0.8.1",
+    "@types/bun": "^1.4.3",
+    "solid-js": "^1.9.17",
+    "typescript": "^5.9.0"
+  }
+}
