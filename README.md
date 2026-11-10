@@ -127,13 +127,14 @@ Run `bun run build` after editing `src/`; reusing the checkout loads
 ## Publishing
 
 ```sh
+bun run build
 npm login
 npm publish
 ```
 
-`prepublishOnly` rebuilds `dist/tui.js` before the package is packed. The built
-entry is committed so GitHub installs work without a build step on the user's
-machine.
+Run `bun run build` before publishing so `dist/tui.js` matches `src/`. The
+built entry is committed so GitHub installs work without a build step on the
+user's machine, and CI fails if the committed build is stale.
 
 ## Limitations
 
